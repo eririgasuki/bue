@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/eririgasuki/bue/issues"
   },
-  "homepage": "https://github.com/eririgasuki/bue#readme"
+  "homepage": "https://github.com/eririgasuki/bue#readme",
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
 }
