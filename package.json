@@ -1,0 +1,23 @@
+{
+  "name": "bue",
+  "version": "0.0.1",
+  "description": "UI组件\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D基于VUE的UI组件库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eririgasuki/bue.git"
+  },
+  "keywords": [
+    "VUE",
+    "UI"
+  ],
+  "author": "eririgasuki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eririgasuki/bue/issues"
+  },
+  "homepage": "https://github.com/eririgasuki/bue#readme"
+}
