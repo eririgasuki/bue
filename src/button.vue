@@ -11,7 +11,16 @@
 
 <script>
 export default {
-  props: ["icon", "iconPosition"]
+  props: {
+    icon: {},
+    iconPosition: {
+      type: String,
+      default: "left",
+      validator(value) {
+        return value === "left" || value === "right";
+      }
+    }
+  }
 };
 </script>
 
@@ -42,7 +51,7 @@ export default {
   }
   > .icon {
     order: 1;
-    margin-right: .1em;
+    margin-right: 0.1em;
   }
   &.icon-right {
     > .content {
@@ -51,7 +60,7 @@ export default {
     > .icon {
       order: 2;
       margin-right: 0;
-      margin-left: .1em;
+      margin-left: 0.1em;
     }
   }
 }
