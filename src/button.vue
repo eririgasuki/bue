@@ -1,7 +1,8 @@
 <template>
-  <button class="b-button" :class="{[`icon-${iconPosition}`]:true}">
-    <b-icon class="icon" v-if="icon" :name="icon"></b-icon>
-    <b-icon class="loading" name="loading"></b-icon>
+  <button class="b-button" :class="{[`icon-${iconPosition}`]:true}" 
+  @click="$emit('click')">
+    <b-icon class="icon" v-if="icon && !loading" :name="icon"></b-icon>
+    <b-icon class="loading icon" v-if="loading" name="loading"></b-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -12,12 +13,21 @@
 export default {
   props: {
     icon: {},
+    loading: {
+      type: Boolean,
+      default: false
+    },
     iconPosition: {
       type: String,
       default: "left",
       validator(value) {
         return value === "left" || value === "right";
       }
+    }
+  },
+  methods:{
+    click(){
+
     }
   }
 };
@@ -58,7 +68,7 @@ export default {
   }
   > .icon {
     order: 1;
-    margin-right: 0.1em;
+    margin-right: 0.3em;
   }
   &.icon-right {
     > .content {
@@ -67,7 +77,7 @@ export default {
     > .icon {
       order: 2;
       margin-right: 0;
-      margin-left: 0.1em;
+      margin-left: 0.3em;
     }
   }
   .loading{
