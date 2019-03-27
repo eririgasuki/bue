@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import Button from './button'
+import ButtonGroup from './button-group'
 import Icon from './icon'
 
 Vue.component('b-button',Button)
+Vue.component('b-button-group',ButtonGroup)
 Vue.component('b-icon',Icon)
 
 
