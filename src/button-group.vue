@@ -5,7 +5,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    for (let node of this.$el.children) {
+      let name = node.nodeName.toLowerCase();
+      if (name !== "button") {
+        console.warn(`b-button-group的子元素应该全是b-button，但你写的是${name}`);
+      }
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -23,9 +32,9 @@ export default {};
       border-top-right-radius: var(--border-radius);
       border-bottom-right-radius: var(--border-radius);
     }
-    &:hover{
-        position: relative;
-        z-index: 1;
+    &:hover {
+      position: relative;
+      z-index: 1;
     }
   }
 }
