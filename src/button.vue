@@ -1,5 +1,5 @@
 <template>
-  <button class="b-button" :class="{[`icon-${iconPosition}`]:true}" 
+  <button class="b-button eriri" :class="{[`icon-${iconPosition}`]:true}" 
   @click="$emit('click')">
     <b-icon class="icon" v-if="icon && !loading" :name="icon"></b-icon>
     <b-icon class="loading icon" v-if="loading" name="loading"></b-icon>
