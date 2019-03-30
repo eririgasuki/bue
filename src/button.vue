@@ -1,6 +1,5 @@
 <template>
-  <button class="b-button eriri" :class="{[`icon-${iconPosition}`]:true}" 
-  @click="$emit('click')">
+  <button class="b-button eriri" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
     <b-icon class="icon" v-if="icon && !loading" :name="icon"></b-icon>
     <b-icon class="loading icon" v-if="loading" name="loading"></b-icon>
     <div class="content">
@@ -10,10 +9,11 @@
 </template>
 
 <script>
-import Icon from './icon'
+import Icon from "./icon";
 export default {
-  components:{
-    'b-icon': Icon
+  name: "BueButton",
+  components: {
+    "b-icon": Icon
   },
   props: {
     icon: {},
@@ -29,10 +29,8 @@ export default {
       }
     }
   },
-  methods:{
-    click(){
-      
-    }
+  methods: {
+    click() {}
   }
 };
 </script>
@@ -84,7 +82,7 @@ export default {
       margin-left: 0.3em;
     }
   }
-  .loading{
+  .loading {
     animation: spin 1s infinite linear;
   }
 }
