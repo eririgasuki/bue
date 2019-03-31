@@ -13,10 +13,16 @@ Vue.component('b-input', Input)
 
 
 new Vue({
-    el: '#app',
-    data: {
-        loading1: false,
-        loading2: false,
-        loading3: false,
+  el: '#app',
+  data: {
+    loading1: false,
+    loading2: false,
+    loading3: false,
+  },
+  methods: {
+    inputChange(e) {
+      console.log(e.target.value);
+
     }
+  }
 })
