@@ -44,6 +44,8 @@
       <b-input disabled value="focus on what is most important"></b-input>
       <b-input readonly value="focus on what is most important"></b-input>
       <b-input value="shut up & start coding"></b-input>
+      <b-input v-model="message"></b-input>
+      <p>{{message}}</p><button @click="message+=1">+1</button>
       <b-input @change="inputChange"></b-input>
     </div>
     <div class="box">
