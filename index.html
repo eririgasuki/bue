@@ -39,21 +39,63 @@
 </head>
 
 <body>
-  <div id="app">
-    <b-row gutter="20">
-      <b-col>1</b-col>
-      <b-col>2</b-col>
-    </b-row>
-    <b-row>
-      <b-col>1</b-col>
-      <b-col offset="2">2</b-col>
-      <b-col>3</b-col>
-    </b-row>
-    <b-row>
-      <b-col :span="2">1</b-col>
-      <b-col :span="22">2</b-col>
-    </b-row>
+  <style>
+    .demobox {
+      min-height: 50px;
+      background-color: #666666;
+      border: 1px solid red;
+    }
+  </style>
 
+  <div id="app">
+    <!-- <b-row>
+      <b-col class="demobox" span="9">
+        <b-row align="left">
+          <b-col>1</b-col>
+          <b-col>2</b-col>
+          <b-col>3</b-col>
+          <b-col>4</b-col>
+        </b-row>
+      </b-col>
+      <b-col class="demobox" span="15">
+        <b-row align="right">
+          <b-col>1</b-col>
+          <b-col>2</b-col>
+          <b-col>3</b-col>
+          <b-col>4</b-col>
+          <b-col>5</b-col>
+          <b-col>6</b-col>
+          <b-col>7</b-col>
+        </b-row>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col class="demobox" span="4">
+        <b-row align="center">
+          <b-col class="logoWrapper"><img src="https://img.alicdn.com/tfs/TB1_uT8a5ERMeJjSspiXXbZLFXa-143-59.png" alt=""
+              class="logo"></b-col>
+        </b-row>
+      </b-col>
+      <b-col class="demobox" span="12"></b-col>
+      <b-col class="demobox" span="6" offset="2"></b-col>
+    </b-row> -->
+    <b-row>
+      <b-col
+      :phone="{span:24}"
+      :pad="{span:8}"
+      :narrow-pc="{span:4}"
+      :pc="{span:2}"
+      :wide-pc="{span:1}"
+      >1</b-col>
+      <b-col
+      :phone="{span:24}"
+      :pad="{span:16}"
+      :narrow-pc="{span:20}"
+      :pc="{span:22}"
+      :wide-pc="{span:23}"
+      >2</b-col>
+    </b-row>
+    
     <div class="box">
       <b-input disabled value="focus on what is most important"></b-input>
       <b-input readonly value="focus on what is most important"></b-input>
