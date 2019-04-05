@@ -6,33 +6,31 @@
 
 <script>
 export default {
-  name: 'BueLayout',
-  data(){
+  name: "BueLayout",
+  data() {
     return {
-      layoutClass:{
+      layoutClass: {
         hasAside: false
       }
-    }
+    };
   },
-  mounted(){
-    this.$children.forEach((vm)=>{
-      if(vm.$options.name === 'BueAside'){
-        this.layoutClass.hasAside = true
+  mounted() {
+    this.$children.forEach(vm => {
+      if (vm.$options.name === "BueAside") {
+        this.layoutClass.hasAside = true;
       }
-      
-    })
+    });
   }
-}
+};
 </script>
 
 
 <style lang="scss" scoped>
-.layout{
+.layout {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  border: 1px solid red;
-  &.hasAside{
+  &.hasAside {
     flex-direction: row;
   }
 }
