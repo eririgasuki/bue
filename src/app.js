@@ -5,6 +5,11 @@ import Icon from './icon'
 import Input from './input'
 import Row from './row'
 import Col from './col'
+import Layout from './layout'
+import Header from './header'
+import Aside from './aside'
+import Content from './content'
+import Footer from './footer'
 
 
 Vue.component('b-button', Button)
@@ -13,6 +18,11 @@ Vue.component('b-icon', Icon)
 Vue.component('b-input', Input)
 Vue.component('b-row', Row)
 Vue.component('b-col', Col)
+Vue.component('b-layout', Layout)
+Vue.component('b-header', Header)
+Vue.component('b-aside', Aside)
+Vue.component('b-content', Content)
+Vue.component('b-footer', Footer)
 
 
 
