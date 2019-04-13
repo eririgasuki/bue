@@ -16,13 +16,13 @@ export default {
   name: "BueToast",
   props: {
     autoClose: {
-      type: Boolean,
-      default: false
+      type: [Boolean, Number],
+      default: 5,
+      validator(value) {
+        return value === false || typeof value === "number";
+      }
     },
-    autoCloseDelay: {
-      type: Number,
-      default: 5
-    },
+
     closeButton: {
       type: Object,
       default() {
@@ -65,7 +65,7 @@ export default {
       if (this.autoClose) {
         setTimeout(() => {
           this.close();
-        }, this.autoCloseDelay * 1000);
+        }, this.autoClose * 1000);
       }
     },
     close() {

@@ -51,8 +51,7 @@ new Vue({
       this.$toast('汉字', {
         enableHtml: false,
         position,
-        autoClose: false,
-        autoCloseDelay: 3,
+        autoClose: 3,
         closeButton: {
           text: 'close toast',
           callback() {

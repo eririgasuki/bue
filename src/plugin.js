@@ -34,7 +34,7 @@ function createToast({
   })
   toast.$slots.default = [message]
   toast.$mount()
-  toast.$on('colse',onclose)
+  toast.$on('close',onClose)
   document.body.appendChild(toast.$el)
   return toast
 }
