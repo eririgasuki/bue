@@ -38,10 +38,19 @@ new Vue({
   },
   created() {},
   methods: {
-    showToast() {
+    showToast1(){
+      this.showToast('top')
+    },
+    showToast2(){
+      this.showToast('middle')
+    },
+    showToast3(){
+      this.showToast('bottom')
+    },
+    showToast(position) {
       this.$toast('汉字', {
         enableHtml: false,
-        position: 'middle',
+        position,
         autoClose: false,
         autoCloseDelay: 3,
         closeButton: {
