@@ -68,6 +68,7 @@ export default {
     },
     close() {
       this.$el.remove();
+      this.$emit('close')
       this.$destroy();
     },
     onclickClose() {
@@ -84,7 +85,18 @@ export default {
 $font-size: 14px;
 $toast-min-height: 40px;
 $toast-background-color: rgba(0, 0, 0, 0.75);
+@keyframes fade-in {
+  0%{
+    opacity: 0;
+    transform: translateY(100%)
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
 .toast {
+  animation: fade-in 1s;
   font-size: $font-size;
   line-height: 1.8;
   min-height: $toast-min-height;

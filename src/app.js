@@ -36,22 +36,21 @@ new Vue({
     loading3: false,
     message: 'hi'
   },
-  created() {
-    this.$toast('汉字', {
-      enableHtml: false,
-      position: 'middle',
-      autoClose: false,
-      autoCloseDelay: 3,
-      closeButton: {
-        text: 'close toast',
-        callback() {
-          console.log('toast closed');
-
-        }
-      }
-    })
-  },
+  created() {},
   methods: {
-    showToast() {}
+    showToast() {
+      this.$toast('汉字', {
+        enableHtml: false,
+        position: 'middle',
+        autoClose: false,
+        autoCloseDelay: 3,
+        closeButton: {
+          text: 'close toast',
+          callback() {
+            console.log('toast closed');
+          }
+        }
+      })
+    }
   }
 })
