@@ -10,7 +10,8 @@ import Header from './header'
 import Aside from './aside'
 import Content from './content'
 import Footer from './footer'
-
+import Toast from './toast'
+import Plugin from './plugin'
 
 Vue.component('b-button', Button)
 Vue.component('b-button-group', ButtonGroup)
@@ -23,7 +24,8 @@ Vue.component('b-header', Header)
 Vue.component('b-aside', Aside)
 Vue.component('b-content', Content)
 Vue.component('b-footer', Footer)
-
+Vue.component('b-toast', Toast)
+Vue.use(Plugin)
 
 
 new Vue({
@@ -34,10 +36,11 @@ new Vue({
     loading3: false,
     message: 'hi'
   },
+  created() {
+  },
   methods: {
-    inputChange(e) {
-      console.log(e.target.value);
-
+    showToast(){
+      this.$toast('im message')
     }
   }
 })

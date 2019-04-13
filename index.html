@@ -32,34 +32,11 @@
 
 <body>
   <style>
-    .demobox {
-      min-height: 50px;
-      border: 1px solid #666;
-    }
-    .aside{
-      background: #333333;
-      width: 200px;
-    }
-    .aside.slide-enter, .aside.slide-leave-to{
-      margin-left: -200px;
-    }
-    .header{
-      background: #999999;
-    }
-    .footer{
-      background: #ccc;
-    }
+
   </style>
 
   <div id="app">
-    <b-layout style="height: 100vh">
-      <b-aside class="demobox">aside</b-aside>
-      <b-layout>
-        <b-header class="demobox">header</b-header>
-        <b-content class="demobox">content</b-content>
-        <b-footer class="demobox">footer</b-footer>
-      </b-layout>
-    </b-layout>
+    <button @click="showToast">show toast</button>
   </div>
   <script src="./src/app.js"></script>
 </body>
