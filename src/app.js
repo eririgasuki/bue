@@ -12,6 +12,12 @@ import Content from './content'
 import Footer from './footer'
 import Toast from './toast'
 import Plugin from './plugin'
+import Tabs from './tabs'
+import TabsHead from './tabs-head'
+import TabsBody from './tabs-body'
+import TabsItem from './tabs-item'
+import TabsPane from './tabs-pane'
+
 
 Vue.component('b-button', Button)
 Vue.component('b-button-group', ButtonGroup)
@@ -26,39 +32,21 @@ Vue.component('b-content', Content)
 Vue.component('b-footer', Footer)
 Vue.component('b-toast', Toast)
 Vue.use(Plugin)
+Vue.component('b-tabs', Tabs)
+Vue.component('b-tabs-head', TabsHead)
+Vue.component('b-tabs-body', TabsBody)
+Vue.component('b-tabs-item', TabsItem)
+Vue.component('b-tabs-pane', TabsPane)
 
 
 new Vue({
   el: '#app',
   data: {
-    loading1: false,
-    loading2: false,
-    loading3: false,
-    message: 'hi'
+    selectedTab:'economy'
   },
   created() {},
   methods: {
-    showToast1(){
-      this.showToast('top')
-    },
-    showToast2(){
-      this.showToast('middle')
-    },
-    showToast3(){
-      this.showToast('bottom')
-    },
-    showToast(position) {
-      this.$toast('汉字', {
-        enableHtml: false,
-        position,
-        autoClose: 3,
-        closeButton: {
-          text: 'close toast',
-          callback() {
-            console.log('toast closed');
-          }
-        }
-      })
-    }
+
   }
+
 })
