@@ -32,6 +32,13 @@ export default {
     };
   },
   mounted() {
+    if (this.$children.length === 0) {
+      console &&
+        console.warn &&
+        console.warn(
+          "the childs component of tabs should be tabs-head or tabs-item"
+        );
+    }
     this.$children.forEach(vm => {
       if (vm.$options.name === "BueTabsHead") {
         vm.$children.forEach(childVm => {
