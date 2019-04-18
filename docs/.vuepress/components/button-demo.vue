@@ -4,7 +4,6 @@
     <b-button icon="settings">默认按钮</b-button>
     <b-button :loading="true">默认按钮</b-button>
     <b-button disabled>默认按钮</b-button>
-    <pre><code>{{content}}</code></pre>
   </div>
 </template>
 
@@ -13,16 +12,6 @@ import Button from "../../../src/button";
 export default {
   components: {
     "b-button": Button
-  },
-  data() {
-    return {
-      content: `
-      <b-button>默认按钮</b-button>
-      <b-button icon="settings">默认按钮</b-button>
-      <b-button :loading="true">默认按钮</b-button>
-      <b-button disabled>默认按钮</b-button>
-      `.replace(/\t+| +/g,'').trim()
-    };
   }
 };
 </script>

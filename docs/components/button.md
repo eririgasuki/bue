@@ -8,5 +8,12 @@ sidebarDepth: 2
 
 使用方法
 <clientOnly>
-  <button-demos></button-demos>
+  <button-demo></button-demo>
 </clientOnly>
+
+```
+<b-button>默认按钮</b-button>
+<b-button icon="settings">默认按钮</b-button>
+<b-button :loading="true">默认按钮</b-button>
+<b-button disabled>默认按钮</b-button>
+```

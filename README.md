@@ -15,20 +15,6 @@
 *,*::before,*::after{box-sizing: border-box}
 ```
 
-同时需要设置默认颜色等变量（后续会改为scss变量），需IE15及以上浏览器支持。
-```
-html {
-    --button-height: 32px;
-    --font-size: 14px;
-    --button-bg: white;
-    --button-active-bg: #eee;
-    --border-radius: 4px;
-    --color: #333;
-    --border-color: #999;
-    --border-color-hover: #666;
-}
-```
-
 2.安装bue
 
 ```
