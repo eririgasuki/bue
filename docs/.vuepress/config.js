@@ -1,4 +1,5 @@
 module.exports = {
+  base: '/bue/',
   title: 'Bue UI',
   description: '基于 Vue 仿 Element 思路的 UI 框架',
   themeConfig: {
@@ -11,7 +12,14 @@ module.exports = {
 
       {
         title: '组件',
-        children: ['/components/button']
+        children: ['/components/button',
+          '/components/input',
+          '/components/grid',
+          '/components/layout',
+          '/components/tabs',
+          '/components/popover',
+          '/components/toast'
+        ]
       }
     ]
   }

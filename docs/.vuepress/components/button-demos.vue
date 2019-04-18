@@ -4,11 +4,7 @@
     <b-button icon="settings">默认按钮</b-button>
     <b-button :loading="true">默认按钮</b-button>
     <b-button disabled>默认按钮</b-button>
-    <pre>
-      <code>
-        {{content}}
-      </code>
-    </pre>
+    <pre><code>{{content}}</code></pre>
   </div>
 </template>
 
@@ -25,7 +21,7 @@ export default {
       <b-button icon="settings">默认按钮</b-button>
       <b-button :loading="true">默认按钮</b-button>
       <b-button disabled>默认按钮</b-button>
-      `
+      `.replace(/\t+| +/g,'').trim()
     };
   }
 };
