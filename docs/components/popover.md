@@ -16,7 +16,7 @@ sidebarDepth: 2
 
 代码
 
-```
+```html
 <b-popover>
   <b-button>上方弹出</b-button>
   <template slot="content">弹出内容</template>
@@ -45,7 +45,7 @@ sidebarDepth: 2
 
 代码
 
-```
+```html
 <b-popover trigger="hover">
   <b-button>上方弹出</b-button>
   <template slot="content">弹出内容</template>

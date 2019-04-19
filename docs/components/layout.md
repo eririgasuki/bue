@@ -16,7 +16,7 @@ sidebarDepth: 2
 
 代码
 
-```
+```html
 <b-layout style="color: white; margin-bottom:50px;">
   <b-header style="height: 50px; background:lightskyblue;">header</b-header>
   <b-content style="height: 100px; background:deepskyblue;">content</b-content>
@@ -34,7 +34,7 @@ sidebarDepth: 2
 
 代码
 
-```
+```html
 <b-layout style="color: white; overflow:hidden; margin-bottom:50px;">
   <b-header style="height: 50px; background:lightskyblue;">header</b-header>
   <b-layout>
@@ -55,7 +55,7 @@ sidebarDepth: 2
 
 代码
 
-```
+```html
 <b-layout style="color: white; overflow:hidden; margin-bottom:50px;">
   <b-aside style=" background:#ddd; width:200px; color: black;">aside</b-aside>
   <b-layout>

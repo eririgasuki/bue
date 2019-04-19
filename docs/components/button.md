@@ -16,7 +16,7 @@ sidebarDepth: 2
 
 代码
 
-```
+```html
 <b-button>默认按钮</b-button>
 <b-button icon="settings">默认按钮</b-button>
 <b-button :loading="true">默认按钮</b-button>

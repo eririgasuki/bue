@@ -13,7 +13,7 @@ export default {
         Vue,
         message,
         propsData: toastOptions,
-        onclose:()=>{
+        onClose:()=>{
           currentToast = null
         }
       })

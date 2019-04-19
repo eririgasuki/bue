@@ -16,7 +16,7 @@ sidebarDepth: 2
 
 代码
 
-```
+```html
 <b-input></b-input>
 <b-input value="中文"></b-input>
 <b-input value="中文" disabled></b-input>
@@ -34,10 +34,11 @@ sidebarDepth: 2
 
 代码
 
-```
+```html
 <b-input v-model="value"></b-input>
 <div>value: {{value}}</div>
-
+```
+```js
 data() {
   return {
     value: "1"

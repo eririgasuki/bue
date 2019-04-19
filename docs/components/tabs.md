@@ -11,7 +11,7 @@ sidebarDepth: 2
   <tabs-demo></tabs-demo>
 </clientOnly>
 
-```
+```html
 <b-tabs :selected="selected">
   <b-tabs-head>
     <b-tabs-item name="1">1</b-tabs-item>

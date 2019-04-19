@@ -18,7 +18,7 @@ Grid - 网格，最多可分为24小格，可设置 gutter 和空白，默认支
 
 代码
 
-```
+```html
 <b-row class="demoRow">
   <b-col span="8">
     <div class="demoCol">8</div>
@@ -114,7 +114,7 @@ Grid - 网格，最多可分为24小格，可设置 gutter 和空白，默认支
 
 代码
 
-```
+```html
 <b-row class="demoRow" gutter="10">
   <b-col span="8">
     <div class="demoCol">8</div>
@@ -152,7 +152,7 @@ Grid - 网格，最多可分为24小格，可设置 gutter 和空白，默认支
 
 代码
 
-```
+```html
 <b-row class="demoRow" gutter="10">
   <b-col span="8">
     <div class="demoCol">8</div>

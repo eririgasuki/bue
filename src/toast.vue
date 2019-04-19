@@ -1,12 +1,12 @@
 <template>
-  <div class="wrapper" :class="toastClasses">
+  <div class="bue-toast" :class="toastClasses">
     <div class="toast" ref="toast">
       <div class="message">
         <slot v-if="!enableHtml"></slot>
         <div v-else v-html="$slots.default[0]"></div>
       </div>
       <div class="line" ref="line"></div>
-      <span class="close" v-if="closeButton" @click="onclickClose()">{{closeButton.text}}</span>
+      <span class="close" v-if="closeButton" @click="onClickClose">{{closeButton.text}}</span>
     </div>
   </div>
 </template>
@@ -45,7 +45,7 @@ export default {
     }
   },
   mounted() {
-    this.updataStyles();
+    this.updateStyles();
     this.execAutoClose();
   },
   computed: {
@@ -54,7 +54,7 @@ export default {
     }
   },
   methods: {
-    updataStyles() {
+    updateStyles() {
       this.$nextTick(() => {
         this.$refs.line.style.height = `${
           this.$refs.toast.getBoundingClientRect().height
@@ -73,7 +73,7 @@ export default {
       this.$emit("close");
       this.$destroy();
     },
-    onclickClose() {
+    onClickClose() {
       this.close();
       if (this.closeButton && typeof this.closeButton.callback === "function") {
         this.closeButton.callback();
@@ -116,7 +116,7 @@ $animation-duration: 300ms;
     opacity: 1;
   }
 }
-.wrapper {
+.bue-toast {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
