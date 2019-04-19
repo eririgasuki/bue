@@ -1,5 +1,5 @@
 <template>
-  <div class="col" :class="ColClass" :style="ColStyle">
+  <div class="col" :class="colClass" :style="colStyle">
     <slot></slot>
   </div>
 </template>
@@ -53,30 +53,29 @@ export default {
       if (!obj) {
         return [];
       }
-      if (obj) {
-        let array = [];
-        if (obj.span) {
-          array.push(`col-${str}${obj.span}`);
-        }
-        if (obj.offset) {
-          array.push(`col-${str}${obj.offset}`);
-        }
+      let array = [];
+      if (obj.span) {
+        array.push(`col-${str}${obj.span}`);
       }
+      if (obj.offset) {
+        array.push(`offset-${str}${obj.offset}`);
+      }
+      return array
     }
   },
   computed: {
-    ColClass() {
+    colClass() {
       let { span, offset, pad, narrowPc, pc, widePc } = this;
-      let createClasses = this.createClasses
+      let createClasses = this.createClasses;
       return [
         ...createClasses({ span, offset }),
-        ...createClasses(pad,'pad-'),
-        ...createClasses(narrowPc,'narrow-pc-'),
-        ...createClasses(pc,'pc-'),
-        ...createClasses(widePc,'wide-pc-'),
+        ...createClasses(pad, "pad-"),
+        ...createClasses(narrowPc, "narrow-pc-"),
+        ...createClasses(pc, "pc-"),
+        ...createClasses(widePc, "wide-pc-")
       ];
     },
-    ColStyle() {
+    colStyle() {
       let { gutter } = this;
       return {
         paddingLeft: gutter / 2 + "px",
@@ -89,7 +88,6 @@ export default {
 
 <style lang="scss" scoped>
 .col {
-  border: 1px solid #000;
   $class-prefix: col-;
   @for $n from 1 through 24 {
     &.#{$class-prefix}#{$n} {

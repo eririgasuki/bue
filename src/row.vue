@@ -1,5 +1,5 @@
 <template>
-  <div class="row" :style="RowStyle" :class="RowClass">
+  <div class="row" :style="rowStyle" :class="rowClass">
     <slot></slot>
   </div>
 </template>
@@ -19,14 +19,14 @@ export default {
     }
   },
   computed: {
-    RowStyle() {
+    rowStyle() {
       let {gutter} = this
       return {
         marginRight: -gutter / 2 + "px",
         marginLeft: -gutter / 2 + "px"
       };
     },
-    RowClass(){
+    rowClass(){
       let {align} = this
       return [align && `align-${align}`]
     }
