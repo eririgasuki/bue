@@ -14,6 +14,8 @@ sidebarDepth: 2
   <input-demo-1></input-demo-1>
 </clientOnly>
 
+代码
+
 ```
 <b-input></b-input>
 <b-input value="中文"></b-input>
@@ -29,6 +31,8 @@ sidebarDepth: 2
 <clientOnly>
   <input-demo-2></input-demo-2>
 </clientOnly>
+
+代码
 
 ```
 <b-input v-model="value"></b-input>

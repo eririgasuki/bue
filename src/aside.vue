@@ -26,12 +26,13 @@ export default {
     right: 0;
   }
 }
-.silde-enter-active,
+.slide-enter-active,
 .slide-leave-active {
-  transition: all .5s;
+  transition: all 0.5s;
 }
 .slide-enter,
-.silde-leave-to {
-  margin-left: -100%;
+.slide-leave-to {
+  margin-left: -200px;
 }
+
 </style>
