@@ -3,6 +3,16 @@ module.exports = {
   title: 'Bue UI',
   description: '基于 Vue 仿 Element 思路的 UI 框架',
   themeConfig: {
+    nav: [{
+        text: 'Home',
+        link: '/'
+      },
+      {
+        text: 'GitHub',
+        link: 'https://github.com/eririgasuki'
+      }
+
+    ],
     sidebar: [{
         title: '入门',
         collapsable: false,
